@@ -156,8 +156,9 @@ stack20ms2tiff(nowDatPath, nowPath)
 # if folder contains more than one tile, mosaic them ---------------------
 
 # Open aoi shapefile
-aoiPath = os.path.join(cwd)
-unzip(aoiPath)
+# aoiPath = os.path.join(cwd)
+# unzip(aoiPath)  # on PC
+unzip(aoiFileName)  # on VLAB, because in VLAB we upload the link as an input
 
 VectorFormat = 'ESRI Shapefile'
 VectorDriver = ogr.GetDriverByName(VectorFormat)

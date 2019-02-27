@@ -1,0 +1,24 @@
+{
+  "scripts": [
+    {
+      "repoPath": "main.sh",
+      "targetPath": "main.sh",
+      "pathType": "FILE"
+ },
+    {
+      "repoPath": "1-1131-DataDownload.py",
+      "targetPath": "1-1131-DataDownload.py",
+      "pathType": "FILE"
+ },
+    {
+      "repoPath": "2-1131-PreProcessing.py",
+      "targetPath": "2-1131-PreProcessing.py",
+      "pathType": "FILE"
+ },
+    {
+      "repoPath": "3-1131-Built-Up.py",
+      "targetPath": "3-1131-Built-Up.py",
+      "pathType": "FILE"
+ }
+  ]
+}

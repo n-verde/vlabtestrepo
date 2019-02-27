@@ -24,7 +24,8 @@ RUN pip install sentinelsat==0.12.2 \
 				Glymur==0.8.16 \
 				satpy==0.12.0 \
 				pyorbital==1.5.0 \
-				rasterio==1.0.18
+				rasterio==1.0.18 \
+				pandas==0.24.1
 				
 # To save your container as a docker image, open a new terminal and type:
 # docker commit 11.3.1 nverde/11.3.1

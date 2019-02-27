@@ -20,14 +20,14 @@ import numpy as np
 
 
 def bua(s2img_path, exportpath):
-    # caclulates Built-Up Area for a Sentinle-2 image
+    # calculates Built-Up Area for a Sentinel-2 image
 
     # open image as array
     with rio.open(str(s2img_path), 'r') as image:
-        B08 = image.read(7)  # band 8 is 7th in stack
-        B11 = image.read(8)  # band 11 is 8th in stack
         B03 = image.read(2)  # band 3 is 2nd in stack
         B04 = image.read(3)  # band 3 is 3d in stack
+        B08 = image.read(7)  # band 8 is 7th in stack
+        B11 = image.read(8)  # band 11 is 8th in stack
         B12 = image.read(9)  # band 12 is 9th in stack
 
         # get metadata for later export
@@ -93,6 +93,8 @@ bua(pastPath, expastPath)  # Past
 bua(nowPath, exnowPath)  # Now
 
 # change detection (subtract current state from past state) -------------------------
+
+
 
 endedTime = datetime.now(timezone.utc)
 

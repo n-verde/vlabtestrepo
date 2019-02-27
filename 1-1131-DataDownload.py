@@ -50,6 +50,9 @@ print("Enter credentials")
 username = input("Username: ")
 password = getpass.getpass("Password: ")
 
+username = 'nverde'
+password = 'gr33nd@isy'
+
 # Set Download Folder ----------------------------------------------
 # set the folder where your data will be downloaded (create if it doesn't exist).
 # NOTE: If you are running a docker container through PyCharm, your path is in the PyCharm project directory.

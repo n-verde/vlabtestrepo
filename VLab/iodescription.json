@@ -1,26 +1,24 @@
 {
   "inputs": [
-    {
-      "id": "DataObject_0h3a3ff",
-      "inputType": "individual",
-      "valueType": "value",
-      "description": "URL to download the Sentinel 2A scene",
-      "name": "City Area of Interest shapefile",
-      "obligation": true,
-      "hasDefault": false,
-      "valueSchema": "url",
-      "target": "data/aoi.shp"
- }
   ],
   "outputs": [
     {
       "id": "DataObject_0n95v5p",
       "outputType": "individual",
       "valueType": "value",
-      "description": "S2A png",
-      "name": "S2A png",
+      "description": "Built-Up area Now",
+      "name": "Built-Up area Now",
       "valueSchema": "url",
-      "target": "data/s2.png"
+      "target": "Built-Up/Now/built-up-area.tif"
+ },
+    {
+      "id": "DataObject_0n95v5p-1",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Built-Up area Past",
+      "name": "Built-Up area Past",
+      "valueSchema": "url",
+      "target": "Built-Up/Past/built-up-area.tif"
  }
   ]
 }

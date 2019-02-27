@@ -23,7 +23,8 @@ from gdal import osr, ogr
 
 # define area of interest (aoi) shapefile (only name - must be in project directory)
 # must be a shapefile with only one polygon
-aoiPath = "aoi.shp"
+# zipfile of shapefile and all complementary files
+aoiFileName = "aoi"
 
 # =============FUNCTIONS============================================
 
@@ -151,12 +152,13 @@ nowPath = os.path.join(tiffPath, "Now")
 
 stack20ms2tiff(nowDatPath, nowPath)
 
-endedTime = datetime.now(timezone.utc)
-
 # clip to area of interest (aoi) and create mosaic-----------------------
 # if folder contains more than one tile, mosaic them ---------------------
 
 # Open aoi shapefile
+aoiPath = os.path.join(cwd)
+unzip(aoiPath)
+
 VectorFormat = 'ESRI Shapefile'
 VectorDriver = ogr.GetDriverByName(VectorFormat)
 aoiVectorDataset = VectorDriver.Open(os.path.join(cwd, aoiPath), 0)  # 0=Read-only, 1=Read-Write
@@ -193,6 +195,8 @@ nowPathClip = os.path.join(tiffPath, "Now")
 for filename in glob.glob(nowPath):
     clip_image(aoiVectorDataset, filename, os.path.join(cwd, nowPathClip))  # clip
 mosaic_images(os.path.join(cwd, nowPathClip))  # mosaic
+
+endedTime = datetime.now(timezone.utc)
 
 print("---------------------------------------------")
 print("Pre-processing completed in " + str(endedTime - startedTime))

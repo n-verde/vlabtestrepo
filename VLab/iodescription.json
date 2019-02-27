@@ -1,5 +1,16 @@
 {
   "inputs": [
+  {
+      "id": "DataObject_0h3a3ff",
+      "inputType": "individual",
+      "valueType": "value",
+      "description": "URL to the AOI shapefile",
+      "name": "AOI shapefile",
+      "obligation": true,
+      "hasDefault": false,
+      "valueSchema": "url",
+      "target": "aoi.shp"
+ }
   ],
   "outputs": [
     {

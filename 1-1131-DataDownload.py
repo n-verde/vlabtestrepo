@@ -46,9 +46,9 @@ cloudMax = 10
 startedTime = datetime.now(timezone.utc)
 
 # Get Sentinel API credentials ----------------------------------
-print("Enter credentials")
-username = input("Username: ")
-password = getpass.getpass("Password: ")
+# print("Enter credentials")
+# username = input("Username: ")
+# password = getpass.getpass("Password: ")
 
 username = 'nverde'
 password = 'gr33nd@isy'

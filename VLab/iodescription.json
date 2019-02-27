@@ -9,7 +9,7 @@
       "obligation": true,
       "hasDefault": false,
       "valueSchema": "url",
-      "target": "aoi.shp"
+      "target": "aoi"
  }
   ],
   "outputs": [

@@ -24,7 +24,7 @@ from gdal import osr, ogr
 # define area of interest (aoi) shapefile (only name - must be in project directory)
 # must be a shapefile with only one polygon
 # zipfile of shapefile and all complementary files
-aoiFileName = "aoi"
+aoiPath = "aoi.shp"
 
 # =============FUNCTIONS============================================
 
@@ -154,11 +154,6 @@ stack20ms2tiff(nowDatPath, nowPath)
 
 # clip to area of interest (aoi) and create mosaic-----------------------
 # if folder contains more than one tile, mosaic them ---------------------
-
-# Open aoi shapefile
-# aoiPath = os.path.join(cwd)
-# unzip(aoiPath)  # on PC
-unzip(aoiFileName)  # on VLAB, because in VLAB we upload the link as an input
 
 VectorFormat = 'ESRI Shapefile'
 VectorDriver = ogr.GetDriverByName(VectorFormat)

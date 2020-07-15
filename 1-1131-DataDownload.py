@@ -50,8 +50,8 @@ startedTime = datetime.now(timezone.utc)
 # username = input("Username: ")
 # password = getpass.getpass("Password: ")
 
-username = '*'
-password = '*'
+username = '***'
+password = '***'
 
 # Set Download Folder ----------------------------------------------
 # set the folder where your data will be downloaded (create if it doesn't exist).
